@@ -1,0 +1,226 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* slider */
+.slider{
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides{
+    display: flex;
+    width: 94%;
+    animation: slide 5s infinite;
+}
+
+.slides img {
+    width: 100%;
+    object-fit: fill;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0);}
+    33% { transform: translateX(-100%);}
+    66% {transform: translateX(-200%);}
+    100% {transform: translateX(0);}
+}
+
+/* صندوق تسجيل الدخول */
+.login-box {
+    flex: 1;
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-box input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+}
+
+.login-box button {
+    width: 80%;
+    padding: 12px;
+    background: #e67e22;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #cf6c1d;
+}
+
+#error-masseg {
+    color: red;
+    margin-top: 10px;
+}
+
+/* ريسبونسف */
+@media (max-width: 786px) {
+    .container {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+    }
+    .slider {
+        height: 100px;
+    }
+    .login-box {
+        padding: 20px;
+    }
+    .login-box input, .login-box button {
+        width: 100%;
+        font-size: 14;
+    }
+    .login-box h2 {
+        font-size: 18;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        display: block;
+        height: 100px;
+    }
+
+    .slider img {
+        width: 100%;
+        object-fit: cover;
+        height: 222px;
+    }
+    .login-box {
+        width: 100%;
+        box-shadow: none;
+    }
+}
+
+/* زر تبديل الوضع */
+
+#theme-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    left: 90%;
+    top: 1%;
+    margin: 5px
+}
+
+body.dark-mode {
+        background: #121212;
+        color: #eee;
+    }
+    
+    body.dark-mode .login-box {
+        background: #1e1e1e;
+    }
+    body.dark-mode .login-box h2 {
+        color: #eee;
+    }
+    body.dark-mode .login-box input {
+        background: #2a2a2a;
+        border: 1px solid #444;
+        color: #fff;
+    }
+    body.dark-mode .login-box button {
+        background: #e67e22;
+    }
+    body.dark-mode .login-box button:hover {
+        background: #cf6c1d;
+    }
+    body.dark-mode header {
+        background: #1e1e1e;
+    }
+  
+
+/* الوضع الداكن */
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background: #121212;
+        color: #eee;
+    }
+    .container{
+        box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+    .login-box {
+        background: #1e1e1e;
+    }
+    .login-box h2 {
+        color: #eee;
+    }
+    .login-box input {
+        background: #2a2a2a;
+        border: 1px solid #444;
+        color: #fff;
+    }
+    .login-box button {
+        background: #e67e22;
+    }
+    .login-box button:hover {
+        background: #cf6c1d;
+    }
+} */
+
+
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: rgb(74 154 77) !important;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    padding: 2px;
+    margin: 0%;
+}
+
+.container-fluid .navbar-brand img {
+    position: relative;
+    width: 120%;
+    left: 4%;
+    border-radius: 30%;
+    height: 61px;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important
+;
+        flex-basis: auto;
+        position: absolute;
+        left: 62%;
+    }
+}

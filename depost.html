@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الايداعات</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-color: #a3b69c;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .custom-note {
+      background-color: #e9f7ef;
+      border: 1px solid #c3e6cb;
+      padding: 15px;
+      border-radius: 8px;
+      color: #155724;
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      font-weight: bold;
+    }
+
+    .copy-btn {
+      white-space: nowrap;
+    }
+
+    @media (max-width: 576px) {
+      .copy-btn {
+        margin-top: 5px;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div style="background: #415da5;
+    height: 80px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+    border-radius: 6%;
+    width: 95%;
+    position: relative;
+    left: -3%;
+    margin-bottom: -8%;">
+        <h2>الايداعات</h2>
+        <p class="per">اختر احد طرق الايداع التالية</p>
+    </div>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form class="bg-white p-4 rounded shadow-sm">
+          <!-- ملاحظة -->
+          <div class="custom-note">
+            ⚠️ ملاحظة: بعد الايداع قم بإرسال سكرين إيصال التحويل الى فريق الدعم لكي يتم تفعيل خطة الاشتراك لديك
+</div>
+          <!-- الحقل الأول -->
+          <div class="mb-3">
+            <label for="field1" class="form-label">الشبكة Tron (TRC20)</label>
+            <input type="text" readonly class="form-control" id="field1" value="TRC20" />
+          </div>
+
+          <!-- الحقل الثاني + زر النسخ -->
+          <div class="mb-3">
+            <label for="linkField" class="form-label">الرابط</label>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                id="linkField"
+                value="THhu1CFkNVTw3Dkz3rR3sLp1QRMvDrNCvu"
+                readonly
+              />
+              <button class="btn btn-outline-primary copy-btn" type="button" onclick="copyLink()" style="background-color: rgb(67, 67, 214);color: white;">
+                نسخ الرابط
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="container py-5" style="margin-top: -23%;">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form class="bg-white p-4 rounded shadow-sm">
+          <!-- ملاحظة -->
+          
+
+          <!-- الحقل الأول -->
+          <div class="mb-3">
+            <label for="field2" class="form-label">الشبكة BNB Smart Chain (BEP20)</label>
+            <input type="text" readonly class="form-control" id="field2" value="BEP20" />
+          </div>
+
+          <!-- الحقل الثاني + زر النسخ -->
+          <div class="mb-3">
+            <label for="linkField2" class="form-label">الرابط</label>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                id="linkField2"
+                value="0xab5a241bbf9b2100fa0baef6c4c91426ec89f546"
+                readonly
+              />
+              <button class="btn btn-outline-primary copy-btn" type="button" onclick="copyLink2()" style="background-color: rgb(67, 67, 214);color: white;">
+                نسخ الرابط
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- 3 -->
+  <div class="container py-5" style="margin-top: -23%;">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form class="bg-white p-4 rounded shadow-sm">
+          <!-- ملاحظة -->
+          
+
+          <!-- الحقل الأول -->
+          <div class="mb-3">
+            <label for="field3" class="form-label">الشبكة Bitcoin</label>
+            <input type="text" readonly class="form-control" id="field3" value="BTC" />
+          </div>
+
+          <!-- الحقل الثاني + زر النسخ -->
+          <div class="mb-3">
+            <label for="linkField3" class="form-label">الرابط</label>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                id="linkField3"
+                value="1DjvGkBoXybqxjkj5j99ofVTW9SmBzsuNR"
+                readonly
+              />
+              <button class="btn btn-outline-primary copy-btn" type="button" onclick="copyLink3()" style="background-color: rgb(67, 67, 214);color: white;">
+                نسخ الرابط
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript لزر النسخ -->
+  <script>
+    function copyLink() {
+      const linkInput = document.getElementById("linkField");
+      linkInput.select();
+      linkInput.setSelectionRange(0, 99999); // للجوال
+      document.execCommand("copy");
+
+      // تأكيد النسخ
+      alert("تم نسخ الرابط إلى الحافظة!");
+    }
+  </script>
+  <!-- JavaScript 2لزر النسخ -->
+  <script>
+    function copyLink2() {
+      const linkInput = document.getElementById("linkField2");
+      linkInput.select();
+      linkInput.setSelectionRange(0, 99999); // للجوال
+      document.execCommand("copy");
+
+      // تأكيد النسخ
+      alert("تم نسخ الرابط إلى الحافظة!");
+    }
+  </script>
+  <!-- JavaScript 2لزر النسخ -->
+  <script>
+    function copyLink2() {
+      const linkInput = document.getElementById("linkField2");
+      linkInput.select();
+      linkInput.setSelectionRange(0, 99999); // للجوال
+      document.execCommand("copy");
+
+      // تأكيد النسخ
+      alert("تم نسخ الرابط إلى الحافظة!");
+    }
+  </script>
+  <!-- JavaScript 3لزر النسخ -->
+  <script>
+    function copyLink3() {
+      const linkInput = document.getElementById("linkField3");
+      linkInput.select();
+      linkInput.setSelectionRange(0, 99999); // للجوال
+      document.execCommand("copy");
+
+      // تأكيد النسخ
+      alert("تم نسخ الرابط إلى الحافظة!");
+    }
+  </script>
+</body>
+</html>

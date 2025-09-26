@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>السحب</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin-top: 50px;
+    }
+
+    .note {
+      font-size: 1.1rem;
+      color: #6c757d;
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      font-weight: 500;
+    }
+
+    @media (max-width: 576px) {
+      .form-label {
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <form class="form-container">
+          
+          <!-- الملاحظة -->
+          <div class="note text-center">
+            <h2>الـسـحـب</h2>
+            الرجاء تعبئة البيانات التالية بدقة.
+          </div>
+
+          <!-- الحقل الثاني: خيارات -->
+        <div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupSelect01">الشبكة</label>
+  <select class="form-select" id="inputGroupSelect01">
+    <option selected>اختراحد الطرق للسحب</option>
+    <option value="1">Tron (TRC20)</option>
+    <option value="2">BNB Smart Chain (BEP20)</option>
+    <option value="3">Bitcoin</option>
+  </select>
+</div>
+
+<!-- الحقل الأول -->
+          <div class="mb-3 row align-items-center">
+            <label for="name" class="col-sm-3 col-form-label text-end">رابط السحب</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="name" name="name" placeholder="ادخل الرابط هنا..." required>
+            </div>
+          </div>
+<!-- الحقل الثاني -->
+          <div class="mb-3 row align-items-center">
+            <label for="name" class="col-sm-3 col-form-label text-end">المبلغ</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="name" name="name" placeholder="ادخل مبلغ السحب هنا..." required>
+            </div>
+          </div>
+
+
+          <!-- زر الإرسال -->
+          <div class="d-grid mt-4">
+            <button type="submit" class="btn btn-primary" onclick="ff()">سحب</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function ff (){
+      alert("قم بالترقية الى VIP لفتح عملية السحب")
+    }
+  </script>
+
+  <!-- Bootstrap JS (اختياري لو كنت بحاجة لخصائص تفاعلية مثل التوست أو المودال) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
